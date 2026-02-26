@@ -10,8 +10,9 @@ async function initConverter() {
                 return matched
             }
         }).replaceAll(" ", "_")
-        return converter.pinyinToKana(
+        var kana = converter.pinyinToKana(
             Pinyin.parse( string ).map( t => t.type === 2 ? t.target + " " : t.source ).join( "" )
         ).replaceAll("_", " ")
+        return wanakana.toKatakana(kana)
     }
 }
