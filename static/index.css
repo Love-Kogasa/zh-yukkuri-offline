@@ -1,0 +1,12 @@
+@import "https://cdn.jsdelivr.net/npm/picnic";
+
+.container {
+    margin: 2em;
+    font-family: "Hiragino Kaku Gothic Pro", serif;
+}
+
+@media all and (orientation: landscape) {
+    .container {
+        width: 20em;
+    }
+}

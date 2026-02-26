@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>中文油库里 but Offline</title>
+    <meta name="description" content="中文油库里语音合成(离线版)">
+    <link href="https://storage.moegirl.org.cn/moegirl/commons/b/b3/%E4%B8%80%E8%B5%B7%E9%A6%92%E9%A6%92%E6%9D%A5%EF%BC%81.jpeg" rel="icon"/>
+    <link rel="stylesheet" href="static/index.css">
+    <script src="https://cdn.jsdelivr.net/gh/creeperyang/pinyin/docs/browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pinyin-to-kana@1.0.0/pinyinToKana.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/number-to-chinese-words@1.0.20/number-to-chinese-words.min.js"></script>
+    <script src="xlib/converter/converter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/encoding-japanese@2.2.0/encoding.min.js"></script>
+    <script src="xlib/unicorn-x86/unicorn-x86.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/qmsg@1.4.0/dist/index.umd.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a class="brand">
+        <span>中文油库里 but OffLine</span>
+      </a>
+      <input id="bmenub" type="checkbox" class="show">
+      <label for="bmenub" class="burger pseudo button">☰</label>
+      <div class="menu">
+        <a href="/" class="pseudo button">主页</a>
+        <a href="https://github.com/Love-Kogasa/zh-yukumo-offline" class="button">Github</a>
+      </div>
+    </nav>
+    
+    <br>
+
+    <div class="container">
+      <img src="https://storage.moegirl.org.cn/moegirl/commons/e/e0/ASCII%E8%89%BA%E6%9C%AF%E5%93%81_%E7%81%B5%E6%A2%A6%E4%B8%8E%E9%AD%94%E7%90%86%E6%B2%99.png" />
+      <label for="input"><b>输入文字:</b></label>
+      <textarea id="input" placeholder="仅支持中文以及部分数字"></textarea>
+      <!-- aquestalk.js 未实现该功能
+        <label for="speed"><b>速度(<span id="speednumber">100%</span>):</b></label>
+        <input type="range" min="10" max="200" value="100" step="10" id="speed" />
+      -->
+      <button id="play">播放</button>
+      <button id="download">下载</button>
+    </div>
+    
+    <div class="container">
+      一个运行在前端的油库里合成器。<br>
+      基于<a href="https://github.com/y52en/aquestalk.js">y52en/aquestalk.js</a>实现的语音生成<br>
+      如果是手机设备可能会慢很多，原因详见上述链接！<br>
+      不支持英文！但支持大部分中文(105错误表示不支持)
+      <br><br>
+      本页由 <a href="https://github.com/Love-Kogasa">Love-Kogasa</a> 编写
+    </div>
+    
+    <script src="static/index.js" type="module"></script>
+  </body>
+</html>
