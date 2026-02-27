@@ -12,7 +12,7 @@ async function initConverter() {
         }).replaceAll(" ", "_")
         var kana = converter.pinyinToKana(
             Pinyin.parse( string ).map( t => t.type === 2 ? t.target + " " : t.source ).join( "" )
-        ).replaceAll("_", " ")
+        ).replaceAll("_", " ").replaceAll(" ", ",")
         return wanakana.toKatakana(kana)
     }
 }
