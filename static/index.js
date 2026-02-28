@@ -3,6 +3,7 @@ import {play_wav, loadAquesTalk} from "../xlib/aquestalk/aquestalk.js"
 const input = document.getElementById("input")
 const play = document.getElementById("play")
 const download = document.getElementById("download")
+const name = document.getElementById("filename")
 // const speed = document.getElementById("speed")
 // const rate = document.getElementById("speednumber")
 
@@ -28,7 +29,10 @@ play.onclick = async () => {
 download.onclick = async () => {
   const blob = new Blob([await aquestalk.run(convert(input.value))], { type: "audio/wav" })
   const url = URL.createObjectURL(blob);
-  window.open(url)
+  var a = document.createElement("a")
+  a.download = name.value
+  a.href = url
+  a.click()
 }
 
 msg.close()
