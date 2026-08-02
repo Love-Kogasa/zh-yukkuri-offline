@@ -7,20 +7,13 @@
     <meta name="description" content="中文油库里语音合成(离线版)">
     <link href="https://storage.moegirl.org.cn/moegirl/commons/b/b3/%E4%B8%80%E8%B5%B7%E9%A6%92%E9%A6%92%E6%9D%A5%EF%BC%81.jpeg" rel="icon"/>
     <link rel="stylesheet" href="static/index.css">
-    <script src="https://cdn.jsdelivr.net/gh/creeperyang/pinyin/docs/browser.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pinyin-to-kana@1.0.0/pinyinToKana.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/number-to-chinese-words@1.0.20/number-to-chinese-words.min.js"></script>
-    <script src="https://unpkg.com/wanakana"></script>
-    <script src="xlib/converter/converter.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/encoding-japanese@2.2.0/encoding.min.js"></script>
-    <script src="xlib/unicorn-x86/unicorn-x86.min.js"></script>
+    <script src="xlib/yukkuri-zh/yukkuri-zh.dist.js"></script>
     <script src="https://fastly.jsdelivr.net/npm/qmsg@1.4.0/dist/index.umd.min.js"></script>
   </head>
   <body>
     <nav>
       <a class="brand">
-        <span>中文油库里 but OffLine</span>
+        <span>中文油库里 → 本地生成</span>
       </a>
       <input id="bmenub" type="checkbox" class="show">
       <label for="bmenub" class="burger pseudo button">☰</label>
@@ -32,30 +25,52 @@
     
     <br>
 
-    <div class="container">
-      <img src="https://storage.moegirl.org.cn/moegirl/commons/e/e0/ASCII%E8%89%BA%E6%9C%AF%E5%93%81_%E7%81%B5%E6%A2%A6%E4%B8%8E%E9%AD%94%E7%90%86%E6%B2%99.png" />
-      <label for="input"><b>输入文字:</b></label>
-      <textarea id="input" placeholder="仅支持中文以及部分数字"></textarea>
-      <label for="filename"><b>下载的文件名(不用带后缀):</b></label>
-      <input type="text" id="filename" value="yukkuri">
-      <!-- aquestalk.js 未实现该功能
-        <label for="speed"><b>速度(<span id="speednumber">100%</span>):</b></label>
-        <input type="range" min="10" max="200" value="100" step="10" id="speed" />
-      -->
-      <br><br>
-      <button id="play">播放</button>
-      <button id="download">下载</button>
-    </div>
+    <center><div class="container">
+      <img src="image.png" width="100%" />
+      <a href="https://github.com/y52en/aquestalk.js/">特别感谢y52en大佬的 aquestalk.js</a><br>
+      <label for="input"><b>输入文字(仅支持中日文):</b></label>
+      <textarea id="input" placeholder="本地生成，可以多写一点，无敏感词w"></textarea>
+      <div class="flex two">
+        <div>
+          <label for="filename"><b>下载的文件名</b></label>
+          <input type="text" id="filename" value="yukkuri">
+        </div>
+        <div>
+          <label for="voices"><b>语音(仅部分受支持)</b></label>
+          <select id="voices">
+            <option value="f1">女声 f1 (灵梦)</option>
+            <option value="f2">女声 f2 (魔理沙)</option>
+            <option value="imd1">中性 imd1</option>
+            <option value="m1">男声 m1</option>
+            <option value="m2">男声 m2</option>
+            <option value="jgr">机械 jgr</option>
+            <option value="dvd">机械 dvd</option>
+            <option value="r1">气泡音 r1</option>
+          </select>
+        </div>
+        <div>
+          <label for="speed"><b>速度(<span id="speednumber">100%</span>)</b></label>
+          <input type="range" min="10" max="200" value="100" step="10" id="speed" />
+        </div>
+        <div>
+          <button id="play">播放</button>
+          <button id="download">下载</button>
+        </div>
+      </div>
+    </div></center>
     
-    <div class="container">
+    <center><div class="container">
       一个运行在前端的油库里合成器。<br>
-      基于<a href="https://github.com/y52en/aquestalk.js">y52en/aquestalk.js</a>实现的语音生成<br>
-      如果是手机设备可能会慢很多，原因详见上述链接！<br>
-      不支持英文！但支持大部分中文(105错误表示不支持)
+      基于<b>y52en/aquestalk.js</b>实现，我将其结合中文处理打包成了一个iife库，以便方便使用<br>
+      仓库: <a href="https://github.com/Love-Kogasa/zh-yukkuri.js">Love-Kogasa/zh-yukkuri.js</a><br>
+      本站完全在手机上开发，电脑页面如果不美观还请原谅<br>
+      由于Aquest License，<b>请不要将本站往外网扔</b>
       <br><br>
-      本页由 <a href="https://github.com/Love-Kogasa">Love-Kogasa</a> 编写
-    </div>
-    
-    <script src="static/index.js" type="module"></script>
+      如果您支持我的工作可以考虑赞助<br>
+      <s>算了，我做不到经常更新项目，你们要赞助了我不成诈骗了么xwx</s>
+      <br><br>
+      本页由 <a href="https://github.com/Love-Kogasa">Love-Kogasa</a> 手搓
+    </div></center>
+    <script src="static/index.js"></script>
   </body>
 </html>

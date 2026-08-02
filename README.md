@@ -3,16 +3,5 @@
 **GithubPage**: https://yukkuri.lovekogasa.dev.tc
 油库里合成基于 https://github.com/y52en/aquestalk.js 实现.  
 
-# RequireMents
-**注意: 离线部署使用请替换CDN**  
-- pinyin
-- pinyinToKana
-- number-to-chinese-words
-- wanakana
-- jszip
-- encoding-japanese  
-  有改动，请使用本仓库中构建好的版本
-- unicorn-x86
-- qmsg
-- aquestalk.js
-- picnic.css (css)
+~~我能不写东西吗，我懒了~~  
+**I strongly recommend that you deploy it to local**
